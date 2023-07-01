@@ -108,10 +108,6 @@ abbr[title] {
   font-weight: bold;
 }
 
-.react-calendar__month-view__days__day--weekend {
-  color: #d10000;
-}
-
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #e9e9e9;
 }
@@ -130,8 +126,10 @@ abbr[title] {
   line-height: 16px;
 }
 
+.react-calendar__tile abbr:hover,
 .react-calendar__tile abbr:enabled:hover,
 .react-calendar__tile abbr:enabled:focus {
+  border-radius: 50%;
   background-color: #e9e9e9;
 }
 
