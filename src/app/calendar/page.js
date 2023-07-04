@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
+import moment from "moment";
 import "./calendar.css";
 
 export default function calendar() {
@@ -18,10 +19,10 @@ export default function calendar() {
       fetch(
         `https://www.googleapis.com/calendar/v3/calendars/ko.south_korea%23holiday%40group.v.calendar.google.com/events?key=${API_KEY}`
       )
-      .then((response) => response.json())
-      .then((json) => {
-        setHolidays(json.items)
-      })
+        .then((response) => response.json())
+        .then((json) => {
+          setHolidays(json.items);
+        });
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -36,6 +37,13 @@ export default function calendar() {
           onChange={onChange}
           value={value}
           calendarType={"US"}
+          tileContent={({ date }) => {
+            const find = holidays.find(
+              (holiday) =>
+                holiday.start.date === moment(date).format("YYYY-MM-DD")
+            );
+            return find ? <div className="holidays">{find.summary}</div> : "";
+          }}
         />
       </div>
     </div>
