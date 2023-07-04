@@ -6,24 +6,26 @@ import "./calendar.css";
 
 export default function calendar() {
   const [value, onChange] = useState(new Date());
+  const [holidays, setHolidays] = useState([]);
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_HOLIDAY_API;
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `https://www.googleapis.com/calendar/v3/calendars/ko.south_korea%23holiday%40group.v.calendar.google.com/events?key=${API_KEY}`
-        )
-          .then((response) => response.json())
-          .then((json) => {
-            console.log(json);
-          });
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
 
-    fetchData();
+  useEffect(() => {
+    getHolidayApi();
   }, []);
+
+  const getHolidayApi = () => {
+    try {
+      fetch(
+        `https://www.googleapis.com/calendar/v3/calendars/ko.south_korea%23holiday%40group.v.calendar.google.com/events?key=${API_KEY}`
+      )
+      .then((response) => response.json())
+      .then((json) => {
+        setHolidays(json.items)
+      })
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div className="react-calendar-background">
