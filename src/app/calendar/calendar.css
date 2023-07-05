@@ -165,3 +165,12 @@ abbr[title] {
   text-align: center;
   line-height: 25px;
 }
+
+.react-calendar_tile--holidays {
+  color: red;
+}
+
+.holidays {
+  font-size: 12px;
+  padding: 4px 0 0 2px;
+}

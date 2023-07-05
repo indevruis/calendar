@@ -44,6 +44,12 @@ export default function calendar() {
             );
             return find ? <div className="holidays">{find.summary}</div> : "";
           }}
+          tileClassName={({ date }) => {
+            const find = holidays.find(
+              (holiday) => holiday.start.date === moment(date).format("YYYY-MM-DD")
+            );
+            return find ? "react-calendar_tile--holidays" : "";
+          }}
         />
       </div>
     </div>
