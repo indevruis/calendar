@@ -46,9 +46,15 @@ export default function calendar() {
           }}
           tileClassName={({ date }) => {
             const find = holidays.find(
-              (holiday) => holiday.start.date === moment(date).format("YYYY-MM-DD")
+              (holiday) =>
+                holiday.start.date === moment(date).format("YYYY-MM-DD")
             );
-            return find ? "react-calendar_tile--holidays" : "";
+            const dayOfTheWeek = date.getDay();
+            return find || (dayOfTheWeek === 0)
+              ? "react-calendar_tile--holidays"
+              : dayOfTheWeek === 6
+              ? "react-calendar_tile--saturday"
+              : "";
           }}
         />
       </div>
