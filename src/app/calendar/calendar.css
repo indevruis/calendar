@@ -25,9 +25,9 @@
 .calendar-container {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 85vh;
   position: absolute;
-  top: 35px;
+  top: 4vh;
   justify-content: center;
 }
 
@@ -127,8 +127,9 @@ abbr[title] {
 .react-calendar__year-view .react-calendar__tile,
 .react-calendar__decade-view .react-calendar__tile,
 .react-calendar__century-view .react-calendar__tile {
-  padding: 2em 0.5em;
+  padding: 8.5vh 0.5em;
   color: black;
+  font-size: 15px;
 }
 
 .react-calendar__tile {
@@ -166,7 +167,7 @@ abbr[title] {
 }
 
 .react-calendar__month-view__days__day {
-  height: 5.2rem;
+  height: 12vh;
   text-align: left;
   display: flex;
   align-items: flex-start;
