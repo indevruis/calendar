@@ -30,19 +30,22 @@ export default function calendar() {
 
   return (
     <div className="react-calendar-background">
-      {/* <h3>Calendar</h3> */}
       <div className="calendar-container">
         <Calendar
           locale="en"
           onChange={onChange}
           value={value}
           calendarType={"US"}
-          tileContent={({ date }) => {
+          tileContent={({ date, view }) => {
             const find = holidays.find(
               (holiday) =>
                 holiday.start.date === moment(date).format("YYYY-MM-DD")
             );
-            return find ? <div className="holidays">{find.summary}</div> : "";
+            return find && view === "month" ? (
+              <div className="holidays">{find.summary}</div>
+            ) : (
+              ""
+            );
           }}
           tileClassName={({ date }) => {
             const find = holidays.find(
