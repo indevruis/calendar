@@ -13,32 +13,31 @@
 
 .react-calendar-background {
   width: 100%;
-  height: 100%;
+  height: 83%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  top: 63px;
 }
 
 .calendar-container {
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: center;
+  position: absolute;
+  top: 35px;
   justify-content: center;
 }
 
 .react-calendar {
   width: 90%;
-  height: 100%;
   border-radius: 5px;
   border: none;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 2em;
-}
-.react-calendar {
-  margin: 0 auto;
 }
 
 .react-calendar--doubleView {
@@ -167,10 +166,10 @@ abbr[title] {
 }
 
 .react-calendar__month-view__days__day {
-  height: 6rem;
+  height: 5.2rem;
   text-align: left;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .react-calendar__month-view__days__day abbr {

@@ -30,7 +30,7 @@ export default function calendar() {
 
   return (
     <div className="react-calendar-background">
-      <h3>Calendar</h3>
+      {/* <h3>Calendar</h3> */}
       <div className="calendar-container">
         <Calendar
           locale="en"
