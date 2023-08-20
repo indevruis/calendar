@@ -1,12 +1,12 @@
 import dayjs from "dayjs";
-import "/public/List.css";
+import styles from "/public/List.module.css";
 
-export default function List({ list }) {
+const List = ({ list }) => {
   const nowDate = dayjs(list.date).format("YYYY.MM.DD");
   return (
-    <div className="list-background">
-      <div className="clicked-day">{nowDate}</div>
-      <div className="tasks">
+    <div className={`${styles.background}`}>
+      <div className={`${styles.clickedDay}`}>{nowDate}</div>
+      <div className={`${styles.tasks}`}>
         {list.tasks.map((task, i) => (
           <div key={i} className="task">
             {task}
@@ -15,4 +15,6 @@ export default function List({ list }) {
       </div>
     </div>
   );
-}
+};
+
+export default List;

@@ -1,12 +1,12 @@
-import Navbar from './components/Navbar'
+import Navbar from './Components/Navbar'
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
-      <div style={{paddingTop: '65px'}}></div>
-    </div>
+  <>
+  <Navbar />
+  <div className="pt-[65px] wh_full"></div>;
+  </> 
   )
-}
+};
 
 export default Home;

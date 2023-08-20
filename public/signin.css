@@ -1,0 +1,59 @@
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-background {
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+}
+
+.login-box {
+  width: 400px;
+  height: 350px;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
+}
+
+.login-logo {
+  margin: 0;
+  padding: 25px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-id,
+.login-pwd {
+  position: relative;
+}
+
+.login-id input,
+.login-pwd input {
+  width: 300px;
+  margin: 13px;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.loginIcon {
+  width: 16px;
+  margin: 0;
+  color: black;
+  position: absolute;
+  top: 24px;
+  left: 63px;
+}
+
+.login-button {
+  width: 300px;
+  height: 39.5px;
+  margin-top: 40px;
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 5px;
+}

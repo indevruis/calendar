@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import Navbar from "../components/Navbar";
+import { useState } from "react";
 import Calendar from "react-calendar";
-import List from "../components/List";
+import Navbar from "../Components/Navbar";
+import List from "./Components/List";
 import dayjs from "dayjs";
 import "public/calendar.css";
 

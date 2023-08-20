@@ -1,4 +1,4 @@
-nav {
+.navbar {
   min-width: 1000px;
   height: 65px;
   padding: 1rem;
@@ -11,31 +11,33 @@ nav {
   right: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.navbar_logo {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.navbar_links {
+.links {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.navbar_Buttons {
+.logo {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+
+.btns {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.navbar_search {
+.search {
   position: relative;
   width: 300px;
 }
 
-.navbar_search input {
+.searchInput {
   width: 100%;
   border: 1px solid #bbb;
   border-radius: 5px;
@@ -51,7 +53,7 @@ nav {
   margin: 0;
 }
 
-.signButtons {
+.signBtn {
   border: 1px solid #bbb;
   border-radius: 5px;
   padding: 5px 12px;
@@ -60,7 +62,8 @@ nav {
   text-align: center;
 }
 
-.bbbButton {
+.bbbBtn {
   background-color: #bbb;
+  border: 1px solid #bbb;
   color: white;
 }

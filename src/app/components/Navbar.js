@@ -1,28 +1,40 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import "public/Navbar.css";
+import styles from "public/Navbar.module.css";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav>
-      <div className="navbar_links">
-        <div className="navbar_logo">
+    <div className={`${styles.navbar}`}>
+      <div className={`${styles.links}`}>
+        <div className={`${styles.logo}`}>
           <Link href="/" style={{ color: "black" }}>
             logo
           </Link>
         </div>
         <Link href="/calendar">Calendar</Link>
       </div>
-      <div className="navbar_Buttons">
-        <div className="navbar_search">
-          <input type="text" placeholder="search" />
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="searchIcon" />
+      <div className={`${styles.btns}`}>
+        <div className={`${styles.search}`}>
+          <input
+            type="text"
+            className={`${styles.searchInput}`}
+            placeholder="search"
+          />
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            className={`${styles.searchIcon}`}
+          />
         </div>
-        <Link href="/login" className="signButtons">
+        <Link href="/signin" className={`${styles.signBtn}`}>
           sign in
         </Link>
+        <Link href="/signup" className={`${styles.signBtn} ${styles.bbbBtn}`}>
+          sign up
+        </Link>
       </div>
-    </nav>
+    </div>
   );
-}
+};
+
+export default Navbar;

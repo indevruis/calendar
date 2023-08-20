@@ -25,87 +25,10 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   display: block;
-}
-
-nav {
-  height: 64px;
-  padding: 0.8rem;
-  border-bottom: 1px solid #e9e9e9;
-  background-color: rgba(255, 255, 255, 0.95);
-  font-weight: 300;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.navbar_logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.navbar_links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.navbar_headerButtons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  top: 13px;
-  right: 73px;
-}
-
-.slash_logo {
-  transform: rotate(75deg);
-  width: 20px;
-  height: 20px;
-  color: #e9e9e9;
-}
-
-.navbar_search {
-  position: relative;
-  width: 300px;
-}
-
-.navbar_search input {
-  width: 100%;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  padding: 10px 12px 10px 17px;
-  font-size: 12px;
-}
-
-.magnifying_glass {
-  position: absolute;
-  width: 17px;
-  top: 10px;
-  right: 12px;
-  margin: 0;
-}
-
-.signButtons {
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  padding: 5px 12px;
-  font-size: 15px;
-  width: 78px;
-  text-align: center;
-}
-
-.bbbButton {
-  background-color: #bbb;
-  color: white;
 }
