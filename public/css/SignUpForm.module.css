@@ -1,0 +1,31 @@
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+}
+
+.logo {
+  padding: 25px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.input {
+  width: 300px;
+  margin: 5px;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.signupBtn {
+  width: 300px;
+  height: 40px;
+  margin-top: 12px;
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
