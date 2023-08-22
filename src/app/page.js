@@ -1,12 +1,13 @@
-import Navbar from './Components/Navbar'
+import Navbar from "./Components/Navbar";
+import MainPage from "./Components/MainPage";
 
 const Home = () => {
   return (
-  <>
-  <Navbar />
-  <div className="pt-[65px] wh_full"></div>;
-  </> 
-  )
+    <div className="w-full h-full">
+      <Navbar />
+      <MainPage />
+    </div>
+  );
 };
 
 export default Home;
