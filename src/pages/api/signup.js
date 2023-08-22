@@ -9,7 +9,7 @@ const handleSignUp = async (req, res) => {
   if (req.method === "POST") {
     try {
       const calendar = (await connectDB).db("calendar");
-      const user = calendar.collection("user").insertOne(data);
+      const user = await calendar.collection("user").insertOne(data);
 
       res.status(302).send("전송완료");
     } catch (err) {
