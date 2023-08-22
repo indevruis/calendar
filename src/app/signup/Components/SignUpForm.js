@@ -136,13 +136,11 @@ const SignUpForm = () => {
           onChange={handleChangeUserPwdConfirm}
         />
       </div>
-      <div className="">
         {isErrorUserPwdConfirm && (
           <div className={`${styles.regExp}`}>
             <span>비밀번호가 일치하지 않습니다</span>
           </div>
         )}
-      </div>
       <div className={`flex flex-col justify-center`}>
         <button type="submit" className={`${styles.signupBtn}`}>
           회원가입
