@@ -1,14 +1,11 @@
-'use client'
-
-import SignUpBtn from "./Components/SignUpBtn";
+import SignBtn from "../Components/SignBtn";
 import SignUpForm from './Components/SignUpForm';
-
 
 const signup = () => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <SignUpForm />
-      <SignUpBtn />
+      <SignBtn />
     </div>
   );
 };
