@@ -2,9 +2,10 @@ import { connectDB } from "/util/database";
 import bcrypt from "bcrypt";
 
 const handleSignUp = async (req, res) => {
-  const data = JSON.parse(req.body);
-  const hash = await bcrypt.hash(data.userPwd, 10);
-  data.userPwd = hash;
+  const { userName, userId, userPwd } = JSON.parse(req.body);
+  const hash = await bcrypt.hash(userPwd, 10);
+  const data = { userName, userId, userPwd: hash };
+  
   if (req.method === "POST") {
     try {
       const calendar = (await connectDB).db("calendar");
