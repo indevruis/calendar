@@ -1,31 +1,13 @@
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
-import "/public/signin.css";
+import SignInForm from './Components/SignInForm'
+import SignBtn from '../Components/SignBtn'
 
-const login = () => {
+const signin = () => {
   return (
-    <div className="login-background flex-c">
-      <div className="login-box">
-        <div className="login-logo">
-          <Link href={"/"}>logo</Link>
-        </div>
-        <div className="login-id flex-c">
-          <input type="text" placeholder="아이디" />
-          <FontAwesomeIcon icon={faUser} className="loginIcon" />
-        </div>
-        <div className="login-pwd flex-c">
-          <input type="password" placeholder="비밀번호" />
-          <FontAwesomeIcon icon={faLock} className="loginIcon" />
-        </div>
-        <div className="flex-c">
-          <button type="submit" className="login-button">
-            로그인
-          </button>
-        </div>
-      </div>
+    <div className='w-full h-full flex flex-col items-center justify-center'>
+      <SignInForm />
+      <SignBtn />
     </div>
   );
 };
 
-export default login;
+export default signin;

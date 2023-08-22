@@ -1,0 +1,47 @@
+.loginBox {
+  width: 400px;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
+}
+
+.logo {
+  margin: 0;
+  padding: 25px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.id,
+.pwd {
+  position: relative;
+}
+
+.idInput,
+.pwdInput {
+  width: 300px;
+  margin: 13px;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.loginIcon {
+  width: 16px;
+  margin: 0;
+  color: black;
+  position: absolute;
+  top: 27px;
+  left: 67px;
+}
+
+.loginBtn {
+  width: 300px;
+  height: 39.5px;
+  margin: 20px 0 40px 0;
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
