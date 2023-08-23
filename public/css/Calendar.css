@@ -79,6 +79,7 @@
 }
 
 .react-calendar__month-view__days__day {
+  position: relative;
   height: 16.666%;
 }
 
@@ -100,11 +101,8 @@
 .holiday {
   position: absolute;
   text-align: left;
-  font-size: 12px;
   padding: 2px 0 0 0;
   color: red;
-  left: 30px;
-  top: 11px;
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {

@@ -6,6 +6,7 @@ import Calendar from "./Components/CalenderContent";
 import List from "./Components/List";
 
 const calendar = () => {
+  const [value, onChange] = useState(new Date());
   const [year, setYear] = useState("2023");
   const [holidays, setHolidays] = useState([]);
   const [list, setList] = useState({
@@ -26,6 +27,10 @@ const calendar = () => {
     }
   };
 
+  const handleChangeYear = (newYear) => {
+    setYear(newYear);
+  };
+
   useEffect(() => {
     handleGetHolidayAPI();
   }, []);
@@ -35,10 +40,11 @@ const calendar = () => {
       <Navbar />
       <div className="w-full h-full flex justify-center items-center pt-[65px]">
         <Calendar
+          value={value}
+          onChange={onChange}
           list={list}
           setList={setList}
           holidays={holidays}
-          setYear={setYear}
         />
         {list.isOpen && <List list={list} />}
       </div>
