@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Calendar from "./Components/CalenderContent";
 import List from "./Components/List";
+import dayjs from "dayjs";
 
 const calendar = () => {
   const [value, onChange] = useState(new Date());
-  const [year, setYear] = useState("2023");
+  const [year, setYear] = useState(dayjs(value).format("YYYY"));
   const [holidays, setHolidays] = useState([]);
   const [list, setList] = useState({
     date: "",
@@ -27,13 +28,9 @@ const calendar = () => {
     }
   };
 
-  const handleChangeYear = (newYear) => {
-    setYear(newYear);
-  };
-
   useEffect(() => {
     handleGetHolidayAPI();
-  }, []);
+  }, [year]);
 
   return (
     <div className="w-full h-full">
@@ -45,6 +42,7 @@ const calendar = () => {
           list={list}
           setList={setList}
           holidays={holidays}
+          setYear={setYear}
         />
         {list.isOpen && <List list={list} />}
       </div>

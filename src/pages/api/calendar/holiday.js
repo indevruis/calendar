@@ -21,7 +21,7 @@ const holidayAPI = async (req, res) => {
   if (req.method === "GET") {
     try {
       const response = await fetch(
-        `http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo?solYear=${year}&numOfRows=30&ServiceKey=${NEXT_PUBLIC_HOLIDAY_API_ENCODING}&_type=json`
+        `http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo?solYear=${year}&numOfRows=25&ServiceKey=${NEXT_PUBLIC_HOLIDAY_API_ENCODING}&_type=json`
       );
       const data = await response.json();
       const holidays = convertHolidaysToData(data.response.body.items.item);

@@ -52,8 +52,9 @@ const CalendarContent = ({
           ""
         );
       }}
-      onClickMonth={(value, event) => {
-        console.log(value);
+      onActiveStartDateChange={({ activeStartDate }) => {
+        const startYear = dayjs(activeStartDate).format("YYYY");
+        setYear(startYear);
       }}
       className={list.isOpen ? "react-calendar-75" : ""}
     />
