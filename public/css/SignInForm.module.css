@@ -33,7 +33,7 @@
   color: black;
   position: absolute;
   top: 27px;
-  left: 67px;
+  left: 32px;
 }
 
 .loginBtn {
@@ -44,4 +44,14 @@
   border: none;
   border-radius: 5px;
   font-size: 14px;
+}
+
+.regExp {
+  width: 300px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  color: red;
+  font-size: 12px;
+  padding-left: 5px;
 }
