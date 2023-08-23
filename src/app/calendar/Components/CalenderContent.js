@@ -1,25 +1,32 @@
-// "use client";
-
 import Calendar from "react-calendar";
 import dayjs from "dayjs";
 import "public/css/Calendar.css";
 
-const CalendarContent = ({ value, onChange, list, setList, holidays }) => {
+const CalendarContent = ({
+  value,
+  onChange,
+  list,
+  setList,
+  holidays,
+  setYear,
+}) => {
   return (
     <Calendar
       locale="en"
       onChange={onChange}
       value={value}
       calendarType="gregory"
-      tileClassName={({ date }) => {
+      tileClassName={({ date, view }) => {
         const findSat = date.getDay();
         const holiday = holidays.find(
           (holiday) => holiday.date === dayjs(date).format("YYYY-MM-DD")
         );
-        return holiday
-          ? "holiday"
-          : findSat === 6
-          ? "react-calendar__month-view__days__day--saturday"
+        return view === "month"
+          ? holiday
+            ? "holiday"
+            : findSat === 6
+            ? "react-calendar__month-view__days__day--saturday"
+            : ""
           : "";
       }}
       onClickDay={(day, event) => {
@@ -44,6 +51,9 @@ const CalendarContent = ({ value, onChange, list, setList, holidays }) => {
         ) : (
           ""
         );
+      }}
+      onClickMonth={(value, event) => {
+        console.log(value);
       }}
       className={list.isOpen ? "react-calendar-75" : ""}
     />
