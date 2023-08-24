@@ -16,10 +16,23 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.taskTitle {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
 .tasks {
   width: 100%;
-  padding: 10px 15px;
+  padding: 5px 15px;
   display: flex;
   flex-direction: column;
   font-size: 15px;
+}
+
+.checkBox {
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+  margin-right: 12px;
 }
