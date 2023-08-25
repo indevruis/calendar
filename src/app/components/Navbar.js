@@ -13,6 +13,7 @@ const Navbar = () => {
           </Link>
         </div>
         <Link href="/calendar">Calendar</Link>
+        <Link href="/todo">Todo</Link>
       </div>
       <div className={`${styles.btns}`}>
         <div className={`${styles.search}`}>
