@@ -1,0 +1,12 @@
+.background {
+ width: 1000px;
+ height: calc(100%-65px);
+ border: 1px solid #e9e9e9;
+ padding: 20px;
+ margin-top: 64px;
+}
+
+.p1530 {
+ height: 100%;
+ padding: 15px 30px;
+}
