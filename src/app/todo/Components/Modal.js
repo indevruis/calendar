@@ -8,17 +8,20 @@ import { useState } from "react";
 
 const Modal = ({ setModal }) => {
   const [cycle, setCycle] = useState([]);
-  const hanldeCloseModal = () => {
+  const handleCloseModal = (e) => {
     setModal(false);
   };
 
   return (
-    <div className={`${styles.background} flex items-center justify-center`}>
+    <div
+      className={`${styles.background} flex items-center justify-center`}
+      onClick={handleCloseModal}
+    >
       <div className={`${styles.modal} `}>
         <FontAwesomeIcon
           icon={faX}
           className={`${styles.outBtn}`}
-          onClick={hanldeCloseModal}
+          onClick={handleCloseModal}
         />
         <form className="pt-[30px]">
           <div>
@@ -45,7 +48,7 @@ const Modal = ({ setModal }) => {
           </div>
           <div className={`${styles.inputBox} flex items-center`}>
             <span className="w-[140px]">주기 설정</span>
-            <CheckboxGroup values={cycle} onChange={setCycle}> 
+            <CheckboxGroup values={cycle} onChange={setCycle}>
               <Checkbox value="daily">Daily</Checkbox>
               <Checkbox value="weekly">Weekly</Checkbox>
               <Checkbox value="monthly">Monthly</Checkbox>
