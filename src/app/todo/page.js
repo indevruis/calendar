@@ -1,31 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Modal from "./Components/Modal";
-import Header from "./Components/Todo/Header";
-import Table from "./Components/Table";
+import Header from "./Components/Header";
+import Today from './Components/Today/Today'
+import Daily from './Components/Daily/Daily'
+import Weekly from "./Components/Weekly/Weekly";
+import Monthly from "./Components/Monthly/Monthly";
 import styles from "public/css/Todo.module.css";
 
 const todo = () => {
-  const columns = useMemo(
-    () => [
-      { accessor: "check", Header: "Check" },
-      { accessor: "todo", Header: "Todo" },
-      { accessor: "time", Header: "Time" },
-    ],
-    []
-  );
-  const data = useMemo(
-    () =>
-      Array(7)
-        .fill()
-        .map(() => ({
-          check: false,
-          todo: "할일",
-          time: "시간",
-        })),
-    []
-  );
   const [modal, setModal] = useState(false);
 
   const handleShowModal = () => {
@@ -40,25 +24,31 @@ const todo = () => {
           <div className="w-full h-2/4 flex justify-start">
             <div className={`w-6/12 h-full ${styles.p1530}`}>
               <div className="w-full h-full flex justify-between mb-[10px]">
-                <span>weekly</span>
+                <span>today</span>
                 <button onClick={handleShowModal}>﹢</button>
               </div>
-              <Table columns={columns} data={data} />
+              <Today />
+            </div>
+            <div className={`w-6/12 h-2/4 ${styles.p1530}`}>
+              <div className="w-full h-full flex justify-between mb-[10px]">
+                <span>daily</span>
+              </div>
+              <Daily />
+            </div>
+          </div>
+          <div className="w-full h-2/4 flex justify-start">
+            <div className={`w-6/12 h-full ${styles.p1530}`}>
+              <div className="w-full h-full flex justify-between mb-[10px]">
+                <span>weekly</span>
+              </div>
+              <Weekly />
             </div>
             <div className={`w-6/12 h-2/4 ${styles.p1530}`}>
               <div className="w-full h-full flex justify-between mb-[10px]">
                 <span>monthly</span>
-                <button onClick={handleShowModal}>﹢</button>
               </div>
-              <Table columns={columns} data={data} />
+              <Monthly />
             </div>
-          </div>
-          <div className={`w-full h-2/4 ${styles.p1530}`}>
-            <div className="w-full h-full flex justify-between mb-[10px]">
-              <span>daily</span>
-              <button onClick={handleShowModal}>﹢</button>
-            </div>
-            <Table columns={columns} data={data} />
           </div>
         </div>
       </div>
