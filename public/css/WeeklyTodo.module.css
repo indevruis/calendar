@@ -1,0 +1,28 @@
+.day {
+  width: 70px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.today {
+  width: 70px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.todoBox {
+  width: 279px;
+}
+
+.todo {
+  width: 279px;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
+.todo:focus {
+  opacity: 1;
+  outline: none;
+  width: 279px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
+}

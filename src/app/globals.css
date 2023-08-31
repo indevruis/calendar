@@ -32,3 +32,15 @@ img {
   max-width: 100%;
   display: block;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+th,
+tr {
+  border-bottom: 1px solid lightgrey;
+  padding: 2px;
+}

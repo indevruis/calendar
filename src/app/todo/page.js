@@ -23,7 +23,7 @@ const todo = () => {
         <div className="w-full flex flex-col">
           <div className="w-full h-2/4 flex justify-start">
             <div className={`w-6/12 h-full ${styles.p1530}`}>
-              <div className="w-full h-full flex justify-between mb-[10px]">
+              <div className={`${styles.title} w-full h-full flex justify-between mb-[10px]`}>
                 <span>today</span>
                 <button onClick={handleShowModal}>﹢</button>
               </div>
@@ -31,7 +31,7 @@ const todo = () => {
             </div>
             <div className={`w-6/12 h-2/4 ${styles.p1530}`}>
               <div className="w-full h-full flex justify-between mb-[10px]">
-                <span>daily</span>
+                <span className={`${styles.title}`}>daily</span>
               </div>
               <Daily />
             </div>
@@ -39,13 +39,13 @@ const todo = () => {
           <div className="w-full h-2/4 flex justify-start">
             <div className={`w-6/12 h-full ${styles.p1530}`}>
               <div className="w-full h-full flex justify-between mb-[10px]">
-                <span>weekly</span>
+                <span className={`${styles.title}`}>weekly</span>
               </div>
               <Weekly />
             </div>
             <div className={`w-6/12 h-2/4 ${styles.p1530}`}>
               <div className="w-full h-full flex justify-between mb-[10px]">
-                <span>monthly</span>
+                <span className={`${styles.title}`}>monthly</span>
               </div>
               <Monthly />
             </div>
