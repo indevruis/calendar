@@ -12,7 +12,7 @@ export default Header;
 
 const Div = styled.div`
   width: 100%;
-  padding: 10px 20px;
+  padding: 3px 20px;
   font-size: 20px;
   font-weight: 500;
 `;
