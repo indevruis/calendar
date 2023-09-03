@@ -6,7 +6,7 @@ const MonthlyTodo = () => {
       <td>
       <input type="text" className={`${styles.title}`} />
       </td>
-      <td className={`${""}`}>
+      <td>
         <input type="text" className={`${styles.content}`} />
       </td>
     </tr>

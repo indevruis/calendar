@@ -1,5 +1,7 @@
 .title {
  width: 100px;
+ height: auto;
+ padding-left: 10px;
  font-size: 15px;
 }
 
@@ -11,4 +13,6 @@
 
 .content {
  width: 319px;
+ font-size: 15px;
+ padding-left: 10px;
 }
