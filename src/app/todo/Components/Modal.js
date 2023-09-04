@@ -8,6 +8,7 @@ import { useState } from "react";
 const Modal = ({ setModal }) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [importance, setImportance] = useState("");
   const [memo, setMemo] = useState("");
 
@@ -21,7 +22,7 @@ const Modal = ({ setModal }) => {
     setDate(e.target.value);
   };
   const handleChangeTime = (e) => {
-    setTitle(e.target.value);
+    setTime(e.target.value);
   };
   const handleChangeImportance = (e) => {
     setImportance(e.target.value);
@@ -34,11 +35,12 @@ const Modal = ({ setModal }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/todos/today", {
+      const response = await fetch("/api/todos/postToday", {
         method: "POST",
         body: JSON.stringify({
           title: title,
           date: date,
+          time: time,
           importance: importance,
           memo: memo,
         }),
